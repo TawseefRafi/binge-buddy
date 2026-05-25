@@ -1,73 +1,11 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 🎬 Binge Buddy — Cinema Tracker & Taste Analytics
+**Binge Buddy** is a premium cinema tracker and personal analytics hub built for cinephiles. Track your watchlists, analyze your habits with custom charts, get roasted by a Gemini-powered AI Cine-Advisor, and export your personal CineWrapped infographics.
+🔗 **Live Website**: [https://bingebudz.netlify.app/](https://bingebudz.netlify.app/)
+---
+## ✨ Features
+- **📊 Cine-Analytics**: Dynamic charts for monthly watch times, ratings distribution, and genre analytics using **Recharts**.
+- **🤖 Gemini AI Cine-Advisor**: Get custom recommendations, summaries, and funny taste roasts based on your watch history.
+- **🎁 CineWrapped Export**: Generate and download a personalized Spotify-Wrapped style image featuring your movie archetype and favorite posters.
+- **👥 Community Hub**: Create discussion threads, write reviews, interact with replies, and customize your profile with unique cinephile avatars.
+- **🔍 Magic Search & Filtering**: Explore movies, TV series, and anime with TMDB-backed search and filter by director, country, or runtime.
+- **🔒 Secure Cloud Sync**: Real-time backup via **Supabase Auth & Database** with offline-first `localStorage` support.
